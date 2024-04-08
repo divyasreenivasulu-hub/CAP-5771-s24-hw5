@@ -27,38 +27,37 @@ def question2():
     answers = {}
 
     # type: bool
-    answers['(a) A'] = None
+    answers['(a) A'] = 1
 
     # type: bool
-    answers['(a) B'] = None
+    answers['(a) B'] = 0
 
     # type: bool
-    answers['(a) C'] = None
+    answers['(a) C'] = 0
 
     # type: bool
-    answers['(a) D'] = None
+    answers['(a) D'] = 1
 
     # type: bool
-    answers['(b) A'] = None
+    answers['(b) A'] = 0
 
     # type: False
-    answers['(b) B'] = None
+    answers['(b) B'] = False
 
     # type: bool
-    answers['(b) C'] = None
+    answers['(b) C'] = 1
 
     # type: bool
-    answers['(b) D'] = None
-
+    answers['(b) D'] = 0 
     # type: eval_float
     # The formulas should only use the variable 'p'. The formulas should be
     # a valid Python expression. Use the functions in the math module as
     # required.
-    answers['(c) Weight update'] = None
+    answers['(c) Weight update'] = 0.4236
 
     # type: float
     # the answer should be correct to 3 significant digits
-    answers['(d) Weight influence'] = None
+    answers['(d) Weight influence'] = 1.527
     return answers
 
 
@@ -67,10 +66,10 @@ def question3():
     answers = {}
 
     # type: string
-    answers['Agree?'] = None
+    answers['Agree?'] = "dis-agree"
 
     # type: explain_string
-    answers['Explain'] = None
+    answers['Explain'] = "without having any prior understanding aboyt the past data and also it doesn't follows the ensemble method techniques"
     return answers
 
 
@@ -79,13 +78,13 @@ def question4():
     answers = {}
 
     # type: bool
-    answers['(a) e=0.5, independent'] = None
+    answers['(a) e=0.5, independent'] = False
 
     # type: bool
-    answers['(b), independent'] = None
+    answers['(b), independent'] = True
 
     # type: bool
-    answers['(c) identical'] = None
+    answers['(c) identical'] = False
     return answers
 
 
@@ -95,19 +94,19 @@ def question5():
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(a)'] = None
+    answers['(a)'] = "iii"
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(b)'] = None
+    answers['(b)'] = "i"
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(c)'] = None
+    answers['(c)'] = "ii"
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(d)'] = None
+    answers['(d)'] = "iv"
     return answers
 
 
@@ -116,31 +115,32 @@ def question6():
     answers = {}
 
     # type: eval_float
-    answers['(a) C1-TPR'] = None
+    answers['(a) C1-TPR'] = p
 
     # type: eval_float
-    answers['(a) C2-TPR'] = None
+    answers['(a) C2-TPR'] = 2p
 
     # type: eval_float
-    answers['(a) C1-FPR'] = None
+    answers['(a) C1-FPR'] = p
 
     # type: eval_float
-    answers['(a) C2-FPR'] = None
+    answers['(a) C2-FPR'] =2p
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
     # choices: ['yes', 'no']
-    answers['(b) C2 better classifier than C1?'] = None
+    answers['(b) C2 better classifier than C1?'] = "no"
 
     # type: explain_string
-    answers['(b) C2 better classifier than C1? Explain'] = None
+    answers['(b) C2 better classifier than C1? Explain'] = "Both classifiers perform as random guessing where TPR is equal to FPR. Increasing the probability of predicting the + class does not make C2 better, as it increases both TPR and FPR equally, maintaining performance equivalent to random chance."
 
     # type: string
     # choices: ['TPR/FPR', 'precision/recall']
-    answers['(c) Which metric?'] = None
+    answers['(c) Which metric?'] = "TPR/FPR"
 
     # type: explain_string
-    answers['(c) explain'] = None
+    answers['(c) explain'] = "TPR and FPR take into account both the positive predictions and their impact on the overall performance in the context of both classes. Since C1 and C2 have equal TPR and FPR, they perform the same according to the random guess baseline in an ROC curve. Precision and recall do not consider true negatives and are thus less informative for comparing classifiers that output random predictions on imbalanced classes."
+
     return answers
 
 
@@ -150,24 +150,26 @@ def question7():
 
     # type: string
     # choices: ['C1', 'C2', 'None']
-    answers['(i) Best classifier?'] = None
+    answers['(i) Best classifier?'] = "C2"
 
     # type: explain_string
-    answers['(i) Best classifier, explain'] = None
+    answers['(i) Best classifier, explain'] = "C2 has a significantly higher TPR (50%) compared to C1 (10%), which means it is better at identifying positive cases. Both have the same precision, but C2 is more effective overall."
+
 
     # type: string
     # choices: ['TPR-FPR', 'precision-recall-F1-Measure']
-    answers['(ii) appropriate metric pair'] = None
+    answers['(ii) appropriate metric pair'] = "precision-recall-F1-Measure"
 
     # type: explain_string
-    answers['(ii) appropriate metric pair, explain'] = None
+    answers['(ii) appropriate metric pair, explain'] = "The precision, recall, and F1-measure give a more complete picture of a classifier’s performance, especially in the context of imbalanced datasets. These metrics consider both the ability to identify positive cases correctly and the avoidance of misclassifying negative cases as positive."
+
 
     # type: string
     # choices: ['C1', 'C2', 'C3']
-    answers['(iii) preferred classifier?'] = None
+    answers['(iii) preferred classifier?'] = "C2"
 
     # type: explain_string
-    answers['(iii) best classifier, explain'] = None
+    answers['(iii) best classifier, explain'] = "C2 achieves the best balance between precision and recall, indicated by the highest F1-measure (50%) among the classifiers. It suggests that C2 is more reliable for correctly identifying positive cases while maintaining a reasonable level of precision."
     return answers
 
 
@@ -176,23 +178,23 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = None
+    answers['(a) precision for C0'] = 0.1
 
     # type: eval_float
-    answers['(a) recall for C0'] = None
+    answers['(a) recall for C0'] = "P"
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = None
+    answers['(b) F-measure of C0'] = "2 * (0.1 * p) / (0.1 + p)"
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
-    answers['C1 better than random?'] = None
+    answers['C1 better than random?'] = "yes"
 
     # type: float
     # What is the range of p for which C1 is better than random?  What is
     # "?" in the expression "p > ?"
 
-    answers['p-range'] = None
+    answers['p-range'] = 0.3
     return answers
 
 
@@ -202,18 +204,23 @@ def question9():
 
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) metrics'] = None
+    answers['(i) metrics'] =  {
+    'recall': 0.5333,
+    'precision': 0.6154,
+    'F-measure': 0.5714,
+    'accuracy': 0.88
+}
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) best metric?'] = None
+    answers['(i) best metric?'] = 'accuracy'
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) worst metric?'] = None
+    answers['(i) worst metric?'] = 'precision'
 
     # type: explain_string
-    answers['(ii) Explain your choices of best and worst metrics'] = None
+    answers['(ii) Explain your choices of best and worst metrics'] = 'Accuracy is the best indicator since it accounts for all correct predictions (both true positives and true negatives) over the total number of samples. Precision is the worst in this context because it does not take into account the correct predictions of the majority class, which can be misleading for imbalanced datasets.'
     return answers
 
 
@@ -223,21 +230,21 @@ def question10():
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(a) better test based on F-measure?'] = None
+    answers['(a) better test based on F-measure?'] = "T1"
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(b) better test based on TPR/FPR?'] = None
+    answers['(b) better test based on TPR/FPR?'] = "T2"
 
     # type: string
     # choices: ['F1', 'TPR/FPR']
-    answers['(c) Which evaluation measure to use between the two tests?'] = None
+    answers['(c) Which evaluation measure to use between the two tests?'] = "F1"
 
     # type: explain_string
-    answers['(c) Which evaluation measure? Explain'] = None
+    answers['(c) Which evaluation measure? Explain'] = 'The F1 score is preferred in medical testing scenarios because it provides a balance between precision and recall, which is critical in ensuring that cases are correctly identified while minimizing false negatives, which could be life-threatening in the case of cancer detection.'
 
     # type: explain_string
-    answers['(d) Example scenario where you would reverse choise in (c)'] = None
+    answers['(d) Example scenario where you would reverse choise in (c)'] = 'In a scenario where the cost of false positives is very high, such as when follow-up procedures are invasive, expensive, or carry significant risks, the TPR/FPR ratio might be preferred to minimize the risk of false alarms while maintaining an acceptable detection rate of true positives.'
     return answers
 #-----------------------------------------------------------
 if __name__ == '__main__':
