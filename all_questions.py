@@ -180,13 +180,13 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = "(p*100)/(p*1000)'
+    answers['(a) precision for C0'] = (p*100)/(p*1000)
 
     # type: eval_float
-    answers['(a) recall for C0'] = "P"
+    answers['(a) recall for C0'] = P
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = "2 * (0.1 * p) / (0.1 + p)"
+    answers['(b) F-measure of C0'] = 2 * (0.1 * p) / (0.1 + p)
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
