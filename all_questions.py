@@ -76,7 +76,7 @@ def question3():
     answers = {}
 
     # type: string
-    answers['Agree?'] = "Disagree"
+    answers['Agree?'] = "No"
 
     # type: explain_string
     answers['Explain'] = "ensemble methods allows multiple methods to improve the performance but each method need to be trained on relevant data(past) but here alna using random selection which doent supports that"
@@ -128,13 +128,13 @@ def question6():
     answers['(a) C1-TPR'] = "p"
 
     # type: eval_float
-    answers['(a) C2-TPR'] =  "2p"
+    answers['(a) C2-TPR'] =  "2*p"
 
     # type: eval_float
     answers['(a) C1-FPR'] = "p"
 
     # type: eval_float
-    answers['(a) C2-FPR'] = "2p"
+    answers['(a) C2-FPR'] = "2*p"
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
@@ -188,7 +188,7 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = "p"#0.1
+    answers['(a) precision for C0'] = "(p*100)/(p*1000)'
 
     # type: eval_float
     answers['(a) recall for C0'] = "P"
@@ -198,7 +198,7 @@ def question8():
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
-    answers['C1 better than random?'] = "no" #"yes"
+    answers['C1 better than random?'] = "no" 
 
     # type: float
     # What is the range of p for which C1 is better than random?  What is
@@ -217,17 +217,17 @@ def question9():
     answers['(i) metrics'] =  {
     'recall': 0.5333,
     'precision': 0.6154,
-    'F-measure': 0.5714,
-    'accuracy': 0.8800
+    'F-measure': 0.5689,
+    'accuracy': 0.88
 }
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) best metric?'] = 'accuracy' #precision
+    answers['(i) best metric?'] = 'F-measure' #precision
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) worst metric?'] = 'precision' #accuracy
+    answers['(i) worst metric?'] = 'accuracy' #accuracy
 
     # type: explain_string
     answers['(ii) Explain your choices of best and worst metrics'] = 'Accuracy is the best indicator since it accounts for all correct predictions (both true positives and true negatives) over the total number of samples. Precision is the worst in this context because it does not take into account the correct predictions of the majority class, which can be misleading for imbalanced datasets.'
@@ -248,7 +248,7 @@ def question10():
 
     # type: string
     # choices: ['F1', 'TPR/FPR']
-    answers['(c) Which evaluation measure to use between the two tests?'] = "F1"
+    answers['(c) Which evaluation measure to use between the two tests?'] = "TPR/FPR"
 
     # type: explain_string
     answers['(c) Which evaluation measure? Explain'] = 'The F1 score is preferred in medical testing scenarios because it provides a balance between precision and recall, which is critical in ensuring that cases are correctly identified while minimizing false negatives, which could be life-threatening in the case of cancer detection.'
