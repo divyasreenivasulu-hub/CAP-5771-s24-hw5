@@ -56,18 +56,18 @@ def question2():
     import math
 
     # Given error rate (p)
-    p = 0.3
+    #p = 0.3
 
     # Calculate the weight update factor (α)
-    alpha = 0.5 * math.log((1 - p) / p)
+    #alpha = 0.5 * math.log((1 - p) / p)
 
-    alpha
+    #alpha
 
-    answers['(c) Weight update'] = alpha
+    answers['(c) Weight update'] = 0.5 * math.log((1 - p) / p)
 
     # type: float
     # the answer should be correct to 3 significant digits
-    answers['(d) Weight influence'] = 1.527 #1.528
+    answers['(d) Weight influence'] = 1.526 #1.528
     return answers
 
 
@@ -76,7 +76,7 @@ def question3():
     answers = {}
 
     # type: string
-    answers['Agree?'] = "dis-agree"
+    answers['Agree?'] = "Disagree"
 
     # type: explain_string
     answers['Explain'] = "ensemble methods allows multiple methods to improve the performance but each method need to be trained on relevant data(past) but here alna using random selection which doent supports that"
@@ -128,7 +128,7 @@ def question6():
     answers['(a) C1-TPR'] = "p"
 
     # type: eval_float
-    answers['(a) C2-TPR'] = "2p"
+    answers['(a) C2-TPR'] =  "2p"
 
     # type: eval_float
     answers['(a) C1-FPR'] = "p"
@@ -176,7 +176,7 @@ def question7():
 
     # type: string
     # choices: ['C1', 'C2', 'C3']
-    answers['(iii) preferred classifier?'] = "C2"
+    answers['(iii) preferred classifier?'] = "C2" #c3
 
     # type: explain_string
     answers['(iii) best classifier, explain'] = "C2 achieves the best balance between precision and recall, indicated by the highest F1-measure (50%) among the classifiers. It suggests that C2 is more reliable for correctly identifying positive cases while maintaining a reasonable level of precision."
@@ -188,7 +188,7 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = 0.1
+    answers['(a) precision for C0'] = "p"#0.1
 
     # type: eval_float
     answers['(a) recall for C0'] = "P"
@@ -198,13 +198,13 @@ def question8():
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
-    answers['C1 better than random?'] = "yes"
+    answers['C1 better than random?'] = "no" #"yes"
 
     # type: float
     # What is the range of p for which C1 is better than random?  What is
     # "?" in the expression "p > ?"
 
-    answers['p-range'] = 0.3
+    answers['p-range'] = 0.1#0.3
     return answers
 
 
@@ -223,11 +223,11 @@ def question9():
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) best metric?'] = 'accuracy'
+    answers['(i) best metric?'] = 'accuracy' #precision
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) worst metric?'] = 'precision'
+    answers['(i) worst metric?'] = 'precision' #accuracy
 
     # type: explain_string
     answers['(ii) Explain your choices of best and worst metrics'] = 'Accuracy is the best indicator since it accounts for all correct predictions (both true positives and true negatives) over the total number of samples. Precision is the worst in this context because it does not take into account the correct predictions of the majority class, which can be misleading for imbalanced datasets.'
