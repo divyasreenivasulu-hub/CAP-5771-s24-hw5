@@ -53,7 +53,17 @@ def question2():
     # The formulas should only use the variable 'p'. The formulas should be
     # a valid Python expression. Use the functions in the math module as
     # required.
-    answers['(c) Weight update'] = None#0.4236 #0.424
+    import math
+
+    # Given error rate (p)
+    p = 0.3
+
+    # Calculate the weight update factor (α)
+    alpha = 0.5 * math.log((1 - p) / p)
+
+    alpha
+
+    answers['(c) Weight update'] = alpha
 
     # type: float
     # the answer should be correct to 3 significant digits
