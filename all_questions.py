@@ -14,11 +14,11 @@ def question1():
 
     # type: float
     # Calculate the probability.
-    answers['(b)'] = 0.002
+    answers['(b)'] = 0.0020
 
     # type: float
     # Calculate the probability.
-    answers['(c)'] = 0.08
+    answers['(c)'] = 0.0800
     return answers
 
 
@@ -39,7 +39,7 @@ def question2():
     answers['(a) D'] = True
 
     # type: bool
-    answers['(b) A'] = 0#true
+    answers['(b) A'] = True
 
     # type: False
     answers['(b) B'] = False
@@ -53,11 +53,11 @@ def question2():
     # The formulas should only use the variable 'p'. The formulas should be
     # a valid Python expression. Use the functions in the math module as
     # required.
-    answers['(c) Weight update'] = 0.4236 #0.424
+    answers['(c) Weight update'] = None#0.4236 #0.424
 
     # type: float
     # the answer should be correct to 3 significant digits
-    answers['(d) Weight influence'] = 1.527#1.528
+    answers['(d) Weight influence'] = None #1.527#1.528
     return answers
 
 
@@ -115,16 +115,16 @@ def question6():
     answers = {}
 
     # type: eval_float
-    answers['(a) C1-TPR'] = p
+    answers['(a) C1-TPR'] = "p"
 
     # type: eval_float
-    answers['(a) C2-TPR'] = 2p
+    answers['(a) C2-TPR'] = "2p"
 
     # type: eval_float
-    answers['(a) C1-FPR'] = p
+    answers['(a) C1-FPR'] = "p"
 
     # type: eval_float
-    answers['(a) C2-FPR'] =2p
+    answers['(a) C2-FPR'] = "2p"
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
@@ -208,7 +208,7 @@ def question9():
     'recall': 0.5333,
     'precision': 0.6154,
     'F-measure': 0.5714,
-    'accuracy': 0.88
+    'accuracy': 0.8800
 }
 
     # type: string
