@@ -55,7 +55,7 @@ def question2():
     # required.
     
 
-    answers['(c) Weight update'] = "0.5 * math.log((1 - p) / p)"
+    answers['(c) Weight update'] = "0.424p"#"0.5 * math.log((1 - p) / p)"
 
     # type: float
     # the answer should be correct to 3 significant digits
@@ -210,7 +210,7 @@ def question9():
     'recall': 0.5333,
     'precision': 0.6154,
     'F-measure': 0.5689,
-    'accuracy': 0.88
+    'accuracy': 0.8800
 }
 
     # type: string
