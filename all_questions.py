@@ -57,7 +57,7 @@ def question2():
 
     # type: float
     # the answer should be correct to 3 significant digits
-    answers['(d) Weight influence'] = None #1.527#1.528
+    answers['(d) Weight influence'] = 1.527 #1.528
     return answers
 
 
