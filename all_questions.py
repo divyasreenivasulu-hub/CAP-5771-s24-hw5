@@ -55,7 +55,7 @@ def question2():
     # required.
     
 
-    answers['(c) Weight update'] = "0.424p"#"0.5 * math.log((1 - p) / p)"
+    answers['(c) Weight update'] = 0.5 * math.log((1 - p) / p)
 
     # type: float
     # the answer should be correct to 3 significant digits
@@ -186,17 +186,17 @@ def question8():
     answers['(a) recall for C0'] = P
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = 2 * (0.1 * p) / (0.1 + p)
+    answers['(b) F-measure of C0'] = (0.2 * p) / (0.1 + p)
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
-    answers['C1 better than random?'] = "no" 
+    answers['C1 better than random?'] = 'no' 
 
     # type: float
     # What is the range of p for which C1 is better than random?  What is
     # "?" in the expression "p > ?"
 
-    answers['p-range'] = 0.1#0.3
+    answers['p-range'] = 0.1000#0.3
     return answers
 
 
