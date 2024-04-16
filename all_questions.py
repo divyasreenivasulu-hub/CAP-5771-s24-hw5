@@ -18,7 +18,7 @@ def question1():
 
     # type: float
     # Calculate the probability.
-    answers['(c)'] = 0.0800
+    answers['(c)'] = 0.008
     return answers
 
 
@@ -55,7 +55,7 @@ def question2():
     # required.
     
 
-    answers['(c) Weight update'] = 0.5 * math.log((1 - p) / p)
+    answers['(c) Weight update'] = "0.5 * math.log((1 - p) / p)"
 
     # type: float
     # the answer should be correct to 3 significant digits
