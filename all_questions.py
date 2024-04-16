@@ -55,11 +55,11 @@ def question2():
     # required.
     
 
-    answers['(c) Weight update'] = "0.5 * math.log((1 - p) / p)"
+    answers['(c) Weight update'] = "0.5 * math.log((1 - 0.3) / 0.3)"
 
     # type: float
     # the answer should be correct to 3 significant digits
-    answers['(d) Weight influence'] = 1.526 #1.528
+    answers['(d) Weight influence'] = 1.5275
     return answers
 
 
@@ -131,17 +131,17 @@ def question6():
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
     # choices: ['yes', 'no']
-    answers['(b) C2 better classifier than C1?'] = "no"
+    answers['(b) C2 better classifier than C1?'] = "yes"
 
     # type: explain_string
     answers['(b) C2 better classifier than C1? Explain'] = "Both classifiers perform as random guessing where TPR is equal to FPR. Increasing the probability of predicting the + class does not make C2 better, as it increases both TPR and FPR equally, maintaining performance equivalent to random chance."
 
     # type: string
     # choices: ['TPR/FPR', 'precision/recall']
-    answers['(c) Which metric?'] = "TPR/FPR"
+    answers['(c) Which metric?'] = "precision/recall"
 
     # type: explain_string
-    answers['(c) explain'] = "TPR and FPR take into account both the positive predictions and their impact on the overall performance in the context of both classes. Since C1 and C2 have equal TPR and FPR, they perform the same according to the random guess baseline in an ROC curve. Precision and recall do not consider true negatives and are thus less informative for comparing classifiers that output random predictions on imbalanced classes."
+    answers['(c) explain'] = "precision and recall take into account both the positive predictions and their impact on the overall performance in the context of both classes. Since C1 and C2 have equal TPR and FPR, they perform the same according to the random guess baseline in an ROC curve. Precision and recall do not consider true negatives and are thus less informative for comparing classifiers that output random predictions on imbalanced classes."
 
     return answers
 
@@ -168,10 +168,10 @@ def question7():
 
     # type: string
     # choices: ['C1', 'C2', 'C3']
-    answers['(iii) preferred classifier?'] = "C2" #c3
+    answers['(iii) preferred classifier?'] = "C3" 
 
     # type: explain_string
-    answers['(iii) best classifier, explain'] = "C2 achieves the best balance between precision and recall, indicated by the highest F1-measure (50%) among the classifiers. It suggests that C2 is more reliable for correctly identifying positive cases while maintaining a reasonable level of precision."
+    answers['(iii) best classifier, explain'] = "C3 achieves the best balance between precision and recall, indicated by the highest F1-measure (50%) among the classifiers. It suggests that C2 is more reliable for correctly identifying positive cases while maintaining a reasonable level of precision."
     return answers
 
 
@@ -180,13 +180,13 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = (p*100)/(p*1000)
+    answers['(a) precision for C0'] = '0.1'
 
     # type: eval_float
-    answers['(a) recall for C0'] = P
+    answers['(a) recall for C0'] = 'P'
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = (0.2 * p) / (0.1 + p)
+    answers['(b) F-measure of C0'] = '(0.2 * p) / (0.1 + p)'
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
@@ -196,7 +196,7 @@ def question8():
     # What is the range of p for which C1 is better than random?  What is
     # "?" in the expression "p > ?"
 
-    answers['p-range'] = 0.1000#0.3
+    answers['p-range'] = 0.3
     return answers
 
 
