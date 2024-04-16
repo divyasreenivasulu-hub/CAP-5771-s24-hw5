@@ -14,7 +14,7 @@ def question1():
 
     # type: float
     # Calculate the probability.
-    answers['(b)'] = 0.0020
+    answers['(b)'] = 0.002
 
     # type: float
     # Calculate the probability.
