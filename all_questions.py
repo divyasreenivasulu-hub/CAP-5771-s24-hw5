@@ -55,7 +55,7 @@ def question2():
     # required.
     
 
-    answers['(c) Weight update'] = "0.5 * math.log((1 - 0.3) / 0.3)"
+    answers['(c) Weight update'] = "0.5 * math.log((1 - p) / p)"
 
     # type: float
     # the answer should be correct to 3 significant digits
@@ -68,7 +68,7 @@ def question3():
     answers = {}
 
     # type: string
-    answers['Agree?'] = "No"
+    answers['Agree?'] = "no"
 
     # type: explain_string
     answers['Explain'] = "ensemble methods allows multiple methods to improve the performance but each method need to be trained on relevant data(past) but here alna using random selection which doent supports that"
@@ -208,18 +208,18 @@ def question9():
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
     answers['(i) metrics'] =  {
     'recall': 0.5333,
-    'precision': 0.6154,
+    'precision': 0.6153,
     'F-measure': 0.5689,
-    'accuracy': 0.8800
+    'accuracy': 0.88
 }
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) best metric?'] = 'F-measure' #precision
+    answers['(i) best metric?'] = 'F-measure' 
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) worst metric?'] = 'accuracy' #accuracy
+    answers['(i) worst metric?'] = 'accuracy' 
 
     # type: explain_string
     answers['(ii) Explain your choices of best and worst metrics'] = 'Accuracy is the best indicator since it accounts for all correct predictions (both true positives and true negatives) over the total number of samples. Precision is the worst in this context because it does not take into account the correct predictions of the majority class, which can be misleading for imbalanced datasets.'
@@ -240,7 +240,7 @@ def question10():
 
     # type: string
     # choices: ['F1', 'TPR/FPR']
-    answers['(c) Which evaluation measure to use between the two tests?'] = "TPR/FPR"
+    answers['(c) Which evaluation measure to use between the two tests?'] = "F1"
 
     # type: explain_string
     answers['(c) Which evaluation measure? Explain'] = 'The F1 score is preferred in medical testing scenarios because it provides a balance between precision and recall, which is critical in ensuring that cases are correctly identified while minimizing false negatives, which could be life-threatening in the case of cancer detection.'
